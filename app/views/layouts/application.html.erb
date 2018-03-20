@@ -1,14 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Workspace</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  </head>
+  <body>
+    <div>
+    <%= link_to home_path do %>
+      <%= image_tag "logo.png", class: "logo" %>
+    <% end %>
+    </div>
+    <div class="windowed-menu">
+    <button class="menu">
+      <%= link_to "Food & recipes ", foodrecipes_path %>
+    </button>
+    <button class="menu2">
+      <%= link_to "Fitness ", fitness_path %>
+    </button>
+    <button class="menu3">
+      <%= link_to "Community ", community_path %>
+    </button>
+    <button class="menu4">
+      <%= link_to "Contact ", contact_path %>
+    </button>
+    </div>
+  <%= yield %>

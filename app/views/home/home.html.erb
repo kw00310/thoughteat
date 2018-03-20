@@ -1,0 +1,82 @@
+<body>
+  <%= video_tag "Background.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+    <div class="window">
+      <div class="window-container">
+        <h1>Welcome!</h1>
+        <p>If you haven't already, please sign up here:</p>
+        <button onclick="document.getElementById('id03').style.display='block'">Sign-up <i class="fas fa-address-card"></i></button>
+        <button onclick="document.getElementById('id01').style.display='block'">Login <i class="fas fa-user"></i></button>
+        <div class="base"></div>
+      </div>
+    
+    <!-- Code for login pop-up div -->
+     <div id="id01" class="modal">
+
+      <!-- Content for Login div -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="container">
+          <%= image_tag("userdefault.jpg")%>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <div class="window-container">
+          <button type="submit" class"logindiv" >Login</button>
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+     <div id="id02" class="modal">
+  </div>
+      <!-- Code for sign-up pop-up div -->
+     <div id="id03" class="modal">
+
+      <!-- Content for sign-up div -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="container">
+          <label for="name"><b>First Name</b></label>
+          <input type="text" placeholder="Enter First Name" name="name" required>
+          <label for="surname"><b>surname</b></label>
+          <input type="text" placeholder="Enter Surname" name="name" required>
+          <label for="age"><b>Date of Birth</b></label>
+          <input type="date" placeholder="Enter D.O.B" name="age" required>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          <label for="email"><b>Repeat Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>New Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <div class="window-container">
+          <button type="submit" class"signupdiv" >Sign-up</button>
+          </div>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+     <div id="id03" class="modal">
+  </div>
+  <div class = "aboutus_div">
+    <div class = "aboutus_window">
+    <%= image_tag "banner.png", class:"banner"%>
+    <p><br>Hi, My name is Kane Walsh. I am a third year Computing & Information Technology Student studying at the University of Surrey. I decided for my final year project I wanted to create a website to help other students and young adults to learn to cook. As a student who loves to cook myself, I wanted to share my tips and knowledge, and create a space for people to learn. With Thoughtful Eating, I hope I can achieve this.</p>
+    <p>Thoughtful Eating is a food and fitness social media presence with the purpose of providing simple food recipes and fitness advice to students and other young adults. By signing up to our website, we hope you find a great selection of new food recipes, fitness advice, and plans to help you to better yourself. I hope you enjoy the site, and thank you for checking us out!</p>
+    <p>Thanks,</p>
+    <p>Kane Walsh</p>
+    </div>
+  </div>
+</body>

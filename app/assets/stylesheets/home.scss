@@ -1,0 +1,193 @@
+
+/*logo positioning */
+.logo{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.window-container{
+    position: fixed;
+}
+
+/*signup & login button css */
+.window-container button{
+    width: 250px;
+    height: 62px;
+    background-color: transparent;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family:'Trebuchet ms' ;
+    font-weight: bold;
+    font-size: 22px;
+    border: 2px solid #000000;
+    position: relative;
+    z-index: 10;
+    text-transform: uppercase;
+    transition: ease 1s all;
+    &:after{
+        con.window-container h1{
+    margin: 0px;
+    font-size: 100px;
+    font-family:'Brush Script MT';
+}
+
+tent: '';
+        width: 0%;
+        height: 58px;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: ease 1s all;
+    }
+    &:hover{
+        color: white;
+        &:after{
+            width: 100%;
+        }
+    }
+}
+
+.window-container p{
+    font-size: 22px;
+    font-weight: bold;
+    font-family:'Trebuchet ms' ;
+    margin-top: 0px;
+}
+.window-container h1{
+    margin: 0px;
+    font-size: 100px;
+    font-family:'Brush Script MT';
+}
+.logindiv button{
+    bottom: 15px;
+    position: relative;
+}
+/*to get rid of blue border onclick */
+.signup:focus, .login:focus {
+    outline:none !important;
+}
+/*hover interactivity for buttons */
+.signup:hover, .login:hover{
+    cursor: pointer;
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
+    border: 3px solid #FFFFFF;
+}
+/*Video Background css*/
+.video {
+ position: fixed;
+ top: 50%; left: 50%;
+ z-index: -20;
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ transform: translate(-50%, -50%);
+}
+/*Div under video*/
+.aboutuscontainer{
+    position:fixed;
+    z-index: fixed;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Window for video colour filter css*/
+.window{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(244, 168, 59, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -10;
+}
+.frontpage{
+    font-size: 100px;
+    font-family:'Brush Script MT';
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 15; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    padding-top: 80px;
+    font-family:'Trebuchet ms' ;
+    
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    height: 60%;
+    
+}
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.5s;
+    animation: animatezoom 0.5s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.userimg{
+    height: 150px;
+    width: 100%;
+    position:relative;
+    
+}
+
+.imgcontainer{
+    padding: 30px;
+}
+.aboutus_div {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:100%;
+}
+.aboutus_window p{
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family:'Trebuchet ms' ;
+    font-size: 22px;
+    text-align: left;
+    font-weight: bold;
+}
+#banner{
+    overflow: hidden;
+    max-width: 50px;
+}

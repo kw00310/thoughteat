@@ -13,3 +13,121 @@
  *= require_tree .
  *= require_self
  */
+ 
+body{
+    margin: 0px
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/*for black footer*/
+.base{
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    height: 45px;
+}
+/*css for header bar (behind the menu)*/
+.roof{
+    z-index: 0; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #f4a83b;
+    position:fixed ;
+    height: 55px;
+    border-bottom:solid 0.1px;
+}
+
+/*for div behind the logo*/
+.logobgd{
+    background-color: #f4a83b;
+    top: 0cm;
+    left: 0cm;
+    height: 3.1cm;
+    width: 10cm;
+    z-index:8;
+    border-bottom:solid 0.1px;
+    border-right:solid 0.1px;
+    position:fixed ;
+    margin: 0;
+    padding: 0;
+}
+/*logo css*/
+.logo{
+    z-index:10;
+    height: 3.1cm;
+    width: 10.4cm;
+    position: fixed;
+    
+}
+
+/*page title css*/
+.title, .aboutus_div h1{
+    font-size: 100px;
+    font-family:'Brush Script MT';
+    position: relative;
+    text-align: center;
+}
+.title{
+     z-index: -1;
+}
+/* background image */
+.page{
+    background-color: white;
+}
+windowed-menu{
+    
+}
+
+/*menu buttons css */
+.menu:hover, .menu2:hover, .menu3:hover, .menu4:hover{
+    cursor: pointer;
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
+}
+
+.menu, .menu2, .menu3, .menu4 {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    position: fixed;
+    top: 15px;
+    right: 344px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'Trebuchet ms' ;
+    z-index: 1;
+    
+/*button positioning*/ 
+}
+.menu2 {
+    right: 251px;
+}
+.menu3 {
+    right: 111px;
+}
+.menu4 {
+    right: 15px;
+}
+.recipeimages{
+    padding-top: 150px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+.recipepic{
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     transition: transform .2s;
+     
+}
+.recipepic:hover {
+    transform: scale(1.4);
+}
