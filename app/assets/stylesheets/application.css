@@ -80,6 +80,9 @@ a{
 .page{
     background-color: white;
 }
+windowed-menu{
+    
+}
 
 /*menu buttons css */
 .menu:hover, .menu2:hover, .menu3:hover, .menu4:hover{
@@ -127,17 +130,4 @@ a{
 }
 .recipepic:hover {
     transform: scale(1.4);
-}
-.fitnessbtn{
-    height: 240px;
-    width: 240px;
-    background-color: blue;
-    font-size: 25px;
-    font-weight: bold;
-    font-family:'Trebuchet ms' ;
-    border-radius: 50%;
-    behavior: url(PIE.htc);
-}
-.fitnessbtn p{
-    color: white;
 }
