@@ -4,7 +4,7 @@
       <div class="window-container">
         <h1>Welcome!</h1>
         <p>If you haven't already, please sign up here:</p>
-        <button onclick="document.getElementById('id03').style.display='block'">Sign-up <i class="fas fa-address-card"></i></button>
+        <button onclick="window.location.href='thoughtfuleating/app/views/users/new.html.erb'">Sign-up <i class="fas fa-address-card"></i></button>
         <button onclick="document.getElementById('id01').style.display='block'">Login <i class="fas fa-user"></i></button>
         <div class="base"></div>
       </div>
@@ -42,27 +42,14 @@
 
       <!-- Content for sign-up div -->
       <form class="modal-content animate" action="/action_page.php">
-        <div class="container">
-          <label for="name"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="name" required>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-          <label for="email"><b>Repeat Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-          <label for="psw"><b>New Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <label for="psw"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <div class="window-container">
-          <button type="submit" class"signupdiv" >Sign-up</button>
+        <div class="form">
+          <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
           </div>
         </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </form>
+  </div>
      <div id="id03" class="modal">
   </div>
   <div class = "aboutus_div">
