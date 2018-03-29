@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'home#home', as: "home"
   get "thoughtfuleating/app/views/home/foodrecipes.html.haml", to: "home#foodrecipes", as: "foodrecipes"
   get "thoughtfuleating/app/views/home/fitness.html.haml", to: "home#fitness", as: "fitness"
