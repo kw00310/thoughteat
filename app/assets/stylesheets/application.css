@@ -87,7 +87,7 @@ a{
     text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
 }
 
-.menu, .menu2, .menu3, .menu4 {
+.menu, .menu2, .menu3, .menu4, .menu-1 {
     background:none;
     border:none;
     margin:0;
@@ -101,6 +101,9 @@ a{
     z-index: 1;
     
 /*button positioning*/ 
+}
+.menu-1 {
+    right: 600px;
 }
 .menu2 {
     right: 251px;
@@ -139,5 +142,50 @@ a{
     behavior: url(PIE.htc);
 }
 .fitnessbtn p{
+    color: white;
+}
+/** dropdown menu **/
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    right: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    bottom:50px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f4a83b;
+}
+.userbottomname{
     color: white;
 }

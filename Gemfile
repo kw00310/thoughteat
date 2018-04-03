@@ -46,5 +46,7 @@ group :development do
   gem 'haml-rails'
   gem 'mysql2'
   gem 'bcrypt'
+  gem 'bootstrap', '~> 4.0.0'
+  gem 'sass'
 end
 

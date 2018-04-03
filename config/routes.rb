@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   resources :users
   root 'home#home', as: "home"
-  get "thoughtfuleating/app/views/home/foodrecipes.html.haml", to: "home#foodrecipes", as: "foodrecipes"
-  get "thoughtfuleating/app/views/home/fitness.html.haml", to: "home#fitness", as: "fitness"
-  get "thoughtfuleating/app/views/home/community.html.haml", to: "home#community", as: "community"
-  get "thoughtfuleating/app/views/home/contact.html.haml", to: "home#contact", as: "contact"
-  get "thoughtfuleating/app/views/home/map.html.haml", to: "home#map", as: "map" 
-  get "thoughtfuleating/app/views/home/calendar.html.haml", to: "home#calendar", as: "calendar"
-  get "thoughtfuleating/app/views/users/new.html.erb", to: "users#new", as: "new"
-  
+  get "/foodrecipes", to: "home#foodrecipes", as: "foodrecipes"
+  get "/fitness", to: "home#fitness", as: "fitness"
+  get "/community", to: "home#community", as: "community"
+  get "/contact", to: "home#contact", as: "contact"
+  get "/map", to: "home#map", as: "map" 
+  get "/calendar", to: "home#calendar", as: "calendar"
+  get "/signup", to: "users#new", as: "signupnew"
+  get "/login", to: "sessions#new", as: "login"
+  post "/login", to: "sessions#create", as: "session"
+  delete "logout", to: "sessions#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
