@@ -40,13 +40,16 @@
         </div>
         <div class="base">
           <div class="dropdown">
-            <button class="dropbtn">USERNAME</button>
+            <button class="dropbtn"><%= link_to image_tag(current_user.image.url(:small)) %></button>
             <div class="dropdown-content">
-            <%= link_to "Profile", current_user %>
-            <%= link_to "Settings", '#' %>
-            <%= link_to "Log out", logout_path, method: :delete %>
+              <%= link_to "Profile", current_user %>
+              <%= link_to "Settings", '#' %>
+              <%= link_to "Log out", logout_path, method: :delete %>
             </div>
           </div>
+            <div class:"baseusername">
+              <p>hi <%= current_user.username %></p>
+            </div>
         </div>
         <div class="mobile-dropdown">
           <button class="mobile-dropbtn">M</button>
