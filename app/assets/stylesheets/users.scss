@@ -20,6 +20,7 @@ input {
     width: 50%;
     position: fixed;
     top: 100px;
+    z-index: 11;
 }
 .namebelow {
     text-align: justify;
@@ -28,6 +29,7 @@ input {
     margin-right: auto;
     width: 50%;
     text-align: center;
+    z-index: 11;
 }
 .submit{
     width: 50px;

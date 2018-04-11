@@ -1,0 +1,11 @@
+<div>  
+  <%= form_for(@recipe) do |f| %>
+    <%= render 'sharedviews/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_field :title, placeholder: "Your Dish Title"%>
+      <%= f.text_area :ingredients, placeholder: "Please list your ingredients here." %>
+      <%= f.text_area :method, placeholder: "Please write your cooking methods here." %>
+    </div>
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  <% end %>
+</div>

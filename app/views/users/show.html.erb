@@ -1,7 +1,13 @@
 <div class="window">   
     <% provide(:title, @user.username) %>
-    <div class="profilepic">
-        <%= link_to image_tag(@user.image.url(:large)) %>
-        <h1 class="namebelow">welcome back, <%= @user.username %></h1>
+    <h1 class="title">welcome back, <%= @user.username %></h1>
+    <div class="col-md-8">
+        <% if @user.recipes.any? %>
+          <h3>You have uploaded <%= @user.recipes.count %> recipes:</h3>
+          <ol class="recipes">
+            <%= render @recipes %>
+          </ol>
+          <%= will_paginate @recipes %>
+        <% end %>
     </div>
 </div>

@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   get "/contact", to: "home#contact", as: "contact"
   get "/map", to: "home#map", as: "map" 
   get "/calendar", to: "home#calendar", as: "calendar"
+  get "/recipeupload", to: "home#recipeupload", as: "recipeupload"
+  
   get "/signup", to: "users#new", as: "signupnew"
   
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create", as: "session"
   delete "logout", to: "sessions#destroy"
+  resources :recipes,          only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
