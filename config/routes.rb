@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/map", to: "home#map", as: "map" 
   get "/calendar", to: "home#calendar", as: "calendar"
   get "/signup", to: "users#new", as: "signupnew"
+  
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create", as: "session"
   delete "logout", to: "sessions#destroy"

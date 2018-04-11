@@ -1,6 +1,7 @@
-<div class="window"    
+<div class="window">   
     <% provide(:title, @user.username) %>
-    <h1>
-      welcome back, <%= @user.username %>
-    </h1>
+    <div class="profilepic">
+        <%= link_to image_tag(@user.image.url(:large)) %>
+        <h1 class="namebelow">welcome back, <%= @user.username %></h1>
+    </div>
 </div>

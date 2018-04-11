@@ -48,5 +48,6 @@ group :development do
   gem 'bcrypt'
   gem 'bootstrap', '~> 4.0.0'
   gem 'sass'
+  gem 'paperclip'
 end
 

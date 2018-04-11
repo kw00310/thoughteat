@@ -1,11 +1,15 @@
 <div id="form">
-    <%= form_for (@user) do |f| %>
+    <%= form_for (@user), html: { multipart: true } do |f| %>
         <%= render 'sharedviews/error_messages' %>
         <%= f.label :username %>
         <%= f.text_field :username %>
 
         <%= f.label :email %>
         <%= f.email_field :email %>
+        
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+        
 
         <%= f.label :password %>
         <%= f.password_field :password %>

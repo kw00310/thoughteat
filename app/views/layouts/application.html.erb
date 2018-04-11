@@ -12,41 +12,51 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <div>
-    <%= link_to home_path do %>
-      <%= image_tag "logo.png", class: "logo" %>
-    <% end %>
-    </div>
-    <div class="windowed-menu">
-    <button class="menu">
-      <%= link_to "Food & recipes ", foodrecipes_path %>
-    </button>
-    <button class="menu2">
-      <%= link_to "Fitness ", fitness_path %>
-    </button>
-    <button class="menu3">
-      <%= link_to "Community ", community_path %>
-    </button>
-    <button class="menu4">
-      <%= link_to "Contact ", contact_path %>
-    </button>
-    </div>
-    <div class="base">
-     <% if logged_in? %>  
-      <div class="">
+      <div>
+      <%= link_to home_path do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
+      </div>
+      <% if logged_in? %>
+        <div class="windowed-menu">
+        <button class="menu">
+          <%= link_to "Food & recipes ", foodrecipes_path %>
+        </button>
+        <button class="menu2">
+          <%= link_to "Fitness ", fitness_path %>
+        </button>
+        <button class="menu3">
+          <%= link_to "Community ", community_path %>
+        </button>
+        <button class="menu4">
+          <%= link_to "Contact ", contact_path %>
+        </button>
+        </div>
+        <div class="base">
           <div class="dropdown">
             <button class="dropbtn">USERNAME</button>
             <div class="dropdown-content">
             <%= link_to "Profile", current_user %>
             <%= link_to "Settings", '#' %>
             <%= link_to "Log out", logout_path, method: :delete %>
+            </div>
+          </div>
         </div>
-      </div>
-    <% else %>
-    
-    <% end %>
-    </div>
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">M</button>
+          <div class="mobile-dropdown-content">
+            <%= link_to "Food & recipes ", foodrecipes_path %>
+            <%= link_to "Fitness ", fitness_path %>
+            <%= link_to "Community ", community_path %>
+            <%= link_to "Contact ", contact_path %>
+        </div>
+      <% else %>
+      <% end %>
     </div>
   <%= yield %>

@@ -66,10 +66,6 @@
     font-size: 100px;
     font-family:'Brush Script MT';
 }
-.logindiv button{
-    bottom: 15px;
-    position: relative;
-}
 /*to get rid of blue border onclick */
 .signup:focus, .login:focus {
     outline:none !important;
@@ -117,36 +113,6 @@
     font-family:'Brush Script MT';
 }
 
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 15; 
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    padding-top: 80px;
-    font-family:'Trebuchet ms' ;
-    
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
-    height: 60%;
-    
-}
-
-
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.5s;
@@ -174,10 +140,10 @@
 }
 .aboutus_div {
     background-color: white;
-    height: 100%;
+    height: 94%;
     width: 100%;
     position: absolute;
-    top:100%;
+    top: 100%;
 }
 .aboutus_window p{
     padding-left: 60px;
@@ -187,7 +153,19 @@
     text-align: left;
     font-weight: bold;
 }
-#banner{
-    overflow: hidden;
-    max-width: 50px;
+.banner{
+    max-width: 2350px;
+    overflow-x: hidden;
+}
+@media (max-width: 910px) {
+    .window-container p{ 
+        font-size: 15px;
+    }
+    .window-container h1{ 
+        font-size: 50px; 
+    }
+    .aboutus_div{
+        display: none;
+    }
+    
 }

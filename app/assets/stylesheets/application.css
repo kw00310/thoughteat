@@ -21,7 +21,7 @@ a{
     color: black;
     text-decoration: none;
 }
-/*for black footer*/
+/*for black footer ----------------------------------------------*/
 .base{
     z-index: 100; 
     bottom: 0; 
@@ -31,7 +31,7 @@ a{
     position: fixed;
     height: 45px;
 }
-/*css for header bar (behind the menu)*/
+/*css for header bar (behind the menu) --------------------------*/
 .roof{
     z-index: 0; 
     top: 0; 
@@ -43,7 +43,7 @@ a{
     border-bottom:solid 0.1px;
 }
 
-/*for div behind the logo*/
+/*for div behind the logo ---------------------------------------*/
 .logobgd{
     background-color: #f4a83b;
     top: 0cm;
@@ -57,7 +57,7 @@ a{
     margin: 0;
     padding: 0;
 }
-/*logo css*/
+/*logo css ------------------------------------------------------*/
 .logo{
     z-index:10;
     height: 3.1cm;
@@ -66,7 +66,7 @@ a{
     
 }
 
-/*page title css*/
+/*page title css ------------------------------------------------*/
 .title, .aboutus_div h1{
     font-size: 100px;
     font-family:'Brush Script MT';
@@ -76,12 +76,12 @@ a{
 .title{
      z-index: -1;
 }
-/* background image */
+/* background image -------------------------------------------- */
 .page{
     background-color: white;
 }
 
-/*menu buttons css */
+/*menu buttons css ---------------------------------------------- */
 .menu:hover, .menu2:hover, .menu3:hover, .menu4:hover{
     cursor: pointer;
     text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
@@ -100,7 +100,7 @@ a{
     font-family:'Trebuchet ms' ;
     z-index: 1;
     
-/*button positioning*/ 
+/*button positioning --------------------------------------------*/ 
 }
 .menu-1 {
     right: 600px;
@@ -131,20 +131,8 @@ a{
 .recipepic:hover {
     transform: scale(1.4);
 }
-.fitnessbtn{
-    height: 240px;
-    width: 240px;
-    background-color: blue;
-    font-size: 25px;
-    font-weight: bold;
-    font-family:'Trebuchet ms' ;
-    border-radius: 50%;
-    behavior: url(PIE.htc);
-}
-.fitnessbtn p{
-    color: white;
-}
-/** dropdown menu **/
+
+/*user dropdown menu -----------------------------------------*/
 .dropbtn {
     background-color: #000000;
     color: white;
@@ -153,11 +141,13 @@ a{
     border: none;
     cursor: pointer;
     right: 0px;
+    position: fixed;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    font-weight: bold;
 }
 
 .dropdown-content {
@@ -168,6 +158,11 @@ a{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     bottom:50px;
     z-index: 1;
+    font-family:'Trebuchet ms' ;
+    font-weight: bold;
+    position: fixed;
+    right: 0px;
+    bottom: 45px;
 }
 
 .dropdown-content a {
@@ -188,4 +183,69 @@ a{
 }
 .userbottomname{
     color: white;
+}
+/*small screen dropdown -------------------------------------- */
+select{
+  display: none;
+  right: 15px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  position: fixed;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family:'Trebuchet ms' ;
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+option{
+    padding: 12px 16px;
+    display: block;
+}
+
+/*mobile menu ------------------------------------------------ */
+.mobile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.mobile-dropbtn{
+    display: none;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    position: fixed;
+    z-index: 1;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 10;
+    top: 65px;
+    right: 15px;
+    
+}
+
+.mobile-dropdown:hover .mobile-dropdown-content {
+    display: inline-block;
+}
+/*adaptions to css for mobile viewers ------------------- */
+@media (max-width: 910px) {
+  .windowed-menu  { display: none; }
+  .mobile-dropbtn { display: inline-block; }
+  .logo{ height: 75px; width: 251px;}
+  .logobgd{ width: 100%; z-index: 0; height: 75px;}
+  .roof{ display: none; }
 }
