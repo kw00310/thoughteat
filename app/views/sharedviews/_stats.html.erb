@@ -1,0 +1,15 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= connoisseur_user_path(@user) %>">
+    <strong id="connoisseur" class="stat">
+      <%= @user.connoisseur.count %>
+    </strong>
+    Connoisseurs
+  </a>
+  <a href="<%= souschef_user_path(@user) %>">
+    <strong id="souschef" class="stat">
+      <%= @user.souschef.count %>
+    </strong>
+    Souschefs
+  </a>
+</div>

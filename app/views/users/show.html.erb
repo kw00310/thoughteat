@@ -4,16 +4,32 @@
   <div class="logobgd"></div>
   <div class="window">   
     <% provide(:title, @user.username) %>
-    <h1>welcome back, <%= @user.username %></h1>
-    <button onclick="window.location.href='/recipeupload'"><i class="fas fa-plus"></i>+ BOOK<i class="fas fa-book"></i></button>
+    <h1><%= @user.username %>'s cookbook</h1>
+    <% if logged_in? %>
+      <div class="row">
+        <aside class="col-md-4">
+          <section class="stats">
+            <%= render 'sharedviews/stats' %>
+          </section>
+          <section class="recipe_form">
+            <%= render 'sharedviews/recipe_form' %>
+          </section>
+        </aside>
+        <div class="col-md-8">
+          <h3>Submit a recipe to your cookbook</h3>
+            <%= render 'sharedviews/feed' %>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
     <div class="col-md-8">
-        <% if @user.recipes.any? %>
-          <h3>You have <%= @user.recipes.count %> recipes in your recipe book:</h3>
-          <ol class="recipes">
-            <%= render @recipes %>
-          </ol>
-          <%= will_paginate @recipes %>
-        <% end %>
-    </div>
+    <%= render 'sharedviews/follow_form' if logged_in? %>
+    <% if @user.recipes.any? %>
+      <h3>recipes (<%= @user.recipes.count %>)</h3>
+      <ol class="recipes">
+        <%= render @recipes %>
+      </ol>
+      <%= will_paginate @recipes %>
+    <% end %>
   </div>
 </body>
