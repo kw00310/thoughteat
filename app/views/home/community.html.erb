@@ -2,7 +2,6 @@
 <div class="hider"></div>
 <div class="logobgd"></div>
 <h1 class="title">Community</h1>
-<button onclick="window.location.href='/recipeupload'">Got any recipes you want to share? Post here <i class="fas fa-address-card"></i></button>
 <% if @feed_items.any? %>
   <ol class="microposts">
     <%= render @feed_items %>

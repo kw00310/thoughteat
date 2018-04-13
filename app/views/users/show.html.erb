@@ -1,13 +1,19 @@
-<div class="window">   
+<body class="page">
+  <div class="roof"></div>
+  <div class="hider"></div>
+  <div class="logobgd"></div>
+  <div class="window">   
     <% provide(:title, @user.username) %>
-    <h1 class="title">welcome back, <%= @user.username %></h1>
+    <h1>welcome back, <%= @user.username %></h1>
+    <button onclick="window.location.href='/recipeupload'"><i class="fas fa-plus"></i>+ BOOK<i class="fas fa-book"></i></button>
     <div class="col-md-8">
         <% if @user.recipes.any? %>
-          <h3>You have uploaded <%= @user.recipes.count %> recipes:</h3>
+          <h3>You have <%= @user.recipes.count %> recipes in your recipe book:</h3>
           <ol class="recipes">
             <%= render @recipes %>
           </ol>
           <%= will_paginate @recipes %>
         <% end %>
     </div>
-</div>
+  </div>
+</body>

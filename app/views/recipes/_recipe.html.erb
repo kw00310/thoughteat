@@ -5,7 +5,7 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(recipe.created_at) %> ago.
     <% if current_user==(recipe.user) %>
-      <%= link_to "delete", recipe, method: :delete,
+      <%= link_to "[delete recipe]", recipe, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
