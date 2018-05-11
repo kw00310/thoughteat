@@ -1,9 +1,9 @@
 <li id="recipe-<%= recipe.id %>">
-  <%= link_to image_tag(current_user.image.url(:small)) %>
-  <span class="user"><%= link_to recipe.user.username, recipe.user %></span>
+  <span class="image"><%= image_tag recipe.image %></span>
   <span class="recipename"><%= recipe.title %></span>
+  <span class="ingredients"><%= recipe.ingredients %></span>
+  <span class="method"><%= recipe.method %></span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(recipe.created_at) %> ago.
     <% if current_user==(recipe.user) %>
       <%= link_to "[delete recipe]", recipe, method: :delete,
                                        data: { confirm: "You sure?" } %>

@@ -40,7 +40,7 @@
         </div>
         <div class="base">
           <div class="dropdown">
-            <button class="dropbtn"><%= link_to image_tag(current_user.image.url(:small)) %></button>
+            <button class="dropbtn"><%= link_to image_tag(current_user.image.url(:small), :class => "baseprofilepic") %></button>
             <div class="dropdown-content">
               <%= link_to "Profile", current_user %>
               <%= link_to "Settings", '#' %>

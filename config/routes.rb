@@ -9,6 +9,19 @@ Rails.application.routes.draw do
   get "/calendar", to: "home#calendar", as: "calendar"
   get "/recipeupload", to: "home#recipeupload", as: "recipeupload"
   
+  get "/bbq", to: "originalrecipes#bbq", as: "bbq"
+  get "/blackbean", to: "originalrecipes#blackbean", as: "blackbean"
+  get "/lithuania", to: "originalrecipes#lithuania", as: "lithuania"
+  get "/meal", to: "originalrecipes#meal", as: "meal"
+  get "/onionmeat", to: "originalrecipes#onionmeat", as: "onionmeat"
+  get "/ramen", to: "originalrecipes#ramen", as: "ramen"
+  get "/roast", to: "originalrecipes#roast", as: "roast"
+  get "/salmon", to: "originalrecipes#salmon", as: "salmon"
+  get "/special", to: "originalrecipes#special", as: "special"
+  get "/sticksnpeas", to: "originalrecipes#sticksnpeas", as: "sticksnpeas"
+  get "/stixs", to: "originalrecipes#stixs", as: "stixs"
+  get "/wraps", to: "originalrecipes#wraps", as: "wraps"
+  
   get "/signup", to: "users#new", as: "signupnew"
   
   get "/login", to: "sessions#new", as: "login"

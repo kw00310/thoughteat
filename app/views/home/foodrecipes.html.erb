@@ -6,18 +6,43 @@
     <img src="../images/ourfood.jpg" alt="bunthis"/>
   </div>
   <div class="recipeimages">
-    <%= image_tag "chicken-surprise.png", class:"recipepic"%>
-    <%= image_tag "meal.png", class:"recipepic" %>
-    <%= image_tag "sticksnpeas.png", class:"recipepic" %>
-    <%= image_tag "ramen.png", class:"recipepic" %>
-    <%= image_tag "bbq.png", class:"recipepic" %>
-    <%= image_tag "onionmeat.png", class:"recipepic" %>
-    <%= image_tag "salmon.png", class:"recipepic" %>
-    <%= image_tag "wraps.png", class:"recipepic" %>
-    <%= image_tag "blackbean.png", class:"recipepic" %>
-    <%= image_tag "stixs.png", class:"recipepic" %>
-    <%= image_tag "roast.png", class:"recipepic" %>
-    <%= image_tag "lithuania.png", class:"recipepic" %>
+    <%= link_to special_url do %>
+      <%= image_tag "chicken-surprise.png", class:"recipepic"%>
+    <% end %>
+    <%= link_to meal_url do %>
+      <%= image_tag "meal.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to sticksnpeas_url do %>
+      <%= image_tag "sticksnpeas.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to ramen_url do %>
+      <%= image_tag "ramen.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to bbq_url do %>
+      <%= image_tag "bbq.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to onionmeat_url do %>
+      <%= image_tag "onionmeat.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to salmon_url do %>
+      <%= image_tag "salmon.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to wraps_url do %>
+      <%= image_tag "wraps.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to blackbean_url do %>
+      <%= image_tag "blackbean.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to stixs_url do %>
+      <%= image_tag "stixs.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to roast_url do %>
+      <%= image_tag "roast.png", class:"recipepic" %>
+    <% end %>
+    <%= link_to lithuania_url do %>
+      <%= image_tag "lithuania.png", class:"recipepic" %>
+    <% end %>
+    
   </div>
 
 </body>
