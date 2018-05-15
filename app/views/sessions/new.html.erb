@@ -1,17 +1,13 @@
-<div id="form">
+<div class="formlogin">
     <%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'form-control' %>
+      <%= f.label :username, class: 'label' %>
+      <%= f.text_field :username, class: 'field' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-      <div class="submit" style="background-color:#f1f1f1">
-          <%= f.submit "Log in", class: "button" %>
-      </div>
+      <%= f.label :password, class: 'label' %>
+      <%= f.password_field :password, class: 'field' %>
+      <%= f.submit "Log in", class: "submit" %>
     <% end %>
-    <div class="container" style="background-color:#f1f1f1">
-     <button type="button" onclick="window.location.href='/'" class="cancelbtn">Cancel</button>
-    </div>
+    <button type="button" onclick="window.location.href='/'" class="cancelbtn">Cancel</button>
 </div>
 <p>New user? <%= link_to "Press here to sign up", signupnew_path %></p>

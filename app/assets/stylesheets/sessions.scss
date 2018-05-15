@@ -1,3 +1,31 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* form css for user input forms */
+.form{
+    padding: 150px;
+    padding-left: 40%;
+}
+.formlogin{
+    padding-top: 200px;
+    padding-left: 40%;
+}
+/*CSS for fields, labels and buttons within form*/
+.field{
+    width: 300px;
+    display: block;
+    font-family:'Trebuchet ms' ;
+    font-weight: 20px;
+}
+.label{
+    font-family:'Trebuchet ms' ;
+    font-size: 20px;
+    font-weight: bold;
+}
+.submit{
+    font-family:'Trebuchet ms' ;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+

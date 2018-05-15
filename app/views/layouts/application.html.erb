@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Workspace</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
     <%= csrf_meta_tags %>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1ydzJBFceqJGZFDyw3Cq4ihRcectcNdg&callback=initMap"
       type="text/javascript"></script>
@@ -26,7 +26,7 @@
       <% if logged_in? %>
         <div class="windowed-menu">
         <button class="menu">
-          <%= link_to "Food & recipes ", foodrecipes_path %>
+          <%= link_to "Food & recipes ", foodrecipes_path %> 
         </button>
         <button class="menu2">
           <%= link_to "Fitness ", fitness_path %>
