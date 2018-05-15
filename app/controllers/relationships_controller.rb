@@ -4,10 +4,18 @@ class RelationshipsController < ApplicationController
     def create
         @user = User.find(params[:connoisseur_id])
         current_user.follow(@user)
-    end    
+        respond_to do |format|
+            format.html { redirect_to @user }
+            format.js
+        end
+    end
 
     def destroy
         @user = Relationship.find(params[:id]).connoisseur
         current_user.unfollow(@user)
+        respond_to do |format|
+            format.html { redirect_to @user }
+            format.js
+        end
     end    
 end
