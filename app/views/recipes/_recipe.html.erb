@@ -1,7 +1,9 @@
 <li id="recipe-<%= recipe.id %>">
   <span class="image"><%= image_tag recipe.image %></span>
-  <span class="recipename"><%= recipe.title %></span>
-  <span class="ingredients"><%= recipe.ingredients %></span>
+  <span class="recipename"><h3><%= recipe.title %></h3></span>
+  <p>Ingredients:</p>
+  <span class="ingredients"><li><%= recipe.ingredients %></li></span>
+  <p>Method:</p>
   <span class="method"><%= recipe.method %></span>
   <span class="timestamp">
     <% if current_user==(recipe.user) %>
