@@ -99,7 +99,8 @@
 
 /*Window for video colour filter css*/
 .window{
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: rgba(244, 168, 59, 0.6);
     display: flex;

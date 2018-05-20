@@ -5,7 +5,17 @@
   <div class="window">   
     <div class="container">
       <div class="one">
-      <% provide(:title, @user.username) %>
+        <div class="col-md-8">
+          <% if @user.recipes.any? %>
+            <ol class="recipes">
+              <%= render @recipes %>
+            </ol>
+            <%= will_paginate @recipes %>
+          <% end %>
+        </div>
+      </div>
+      <div class="two">
+        <% provide(:title, @user.username) %>
         <h1><%= @user.username %>'s cookbook</h1>
         <%= render 'sharedviews/follow_form' if logged_in? %>
         <h3>recipes (<%= @user.recipes.count %>)</h3>
@@ -25,16 +35,6 @@
           </div>
         <% else %>
         <% end %>
-        </div>
-        <div class="two">
-          <div class="col-md-8">
-          <% if @user.recipes.any? %>
-            <ol class="recipes">
-              <%= render @recipes %>
-            </ol>
-            <%= will_paginate @recipes %>
-          <% end %>
-          </div>
-        </div>
+      </div>
   </div>
 </body>

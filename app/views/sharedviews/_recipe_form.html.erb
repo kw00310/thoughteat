@@ -5,8 +5,8 @@
     <%= render 'sharedviews/error_messages', object: f.object %>
     <div class="field">
       <%= f.text_field :title, placeholder: "Your Dish Title"%>
-      <%= f.text_area :ingredients, placeholder: "Please list your ingredients here." %>
-      <%= f.text_area :method, placeholder: "Please write your cooking methods here." %>
+      <%= f.text_area :ingredients, placeholder: "Please list your ingredients here.", class: "text_area"%>
+      <%= f.text_area :method, placeholder: "Please write your cooking methods here.", class: "text_area" %>
     </div>
     <%= f.submit "Post", class: "btn btn-primary" %>
   <% end %>

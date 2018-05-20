@@ -38,7 +38,7 @@ input {
   margin-top: 0;
   padding: 0;
   a {
-    float: left;
+    display: inline-block;
     padding: 0 10px;
     border-left: 1px solid gray;
     color: gray;
@@ -74,25 +74,72 @@ input {
 
 .one {
     width: 655px;
-    top: 150px;
-    left: 300px;
-    height: 672px;
+    padding: 0px 20px;
     background-color: white;
     display: block;
     border: 1px solid white;
-    position: fixed;
+    position: static;
     float: left;
     text-align: center;
+    @media only screen and (min-width: 850px) {
+      height: 700px;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 450px;
+    }
+    @media only screen and (max-width: 1050px) {
+      width: 350px;
+    }
+    @media only screen and (max-width: 850px) {
+      width: 80vw;
+      margin: 0px 10vw;
+      margin-top: 100px;
+    }
 }
 .two {
     width: 655px;
-    top: 150px;
-    right: 300px;
-    height: 672px;
+    padding: 0px 20px;
     background-color: white;
     display: block;
     border: 1px solid white;
-    position: fixed;
+    position: static;
     float: right;
     text-align: center;
+    @media only screen and (min-width: 850px) {
+      height: 700px;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 450px;
+    }
+    @media only screen and (max-width: 1050px) {
+      width: 350px;
+    }
+    @media only screen and (max-width: 850px) {
+      width: 80vw;
+      margin: 0px 10vw;
+      margin-bottom: 150px;
+    }
+}
+.recipes .timestamp{
+  margin: 0px;
+  margin-top: 40px;
+  a{
+    background-color: black;
+    padding: 10px 30px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid black;
+    transition: ease 0.5s all;
+    &:hover{
+      background-color: #5a5a5a;
+      border: 1px #5a5a5a solid;
+    }
+  }
+}
+.recipes .recipename{
+  margin-left: 0px;
+}
+
+.text_area{
+  resize: none;
 }

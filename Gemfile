@@ -51,5 +51,7 @@ group :development do
   gem 'paperclip'
   gem 'will_paginate', '3.1.6'
   gem 'bootstrap-will_paginate', '1.0.0'
+  gem "passenger"
+  gem "sqlite3"
 end
 

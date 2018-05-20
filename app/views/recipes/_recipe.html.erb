@@ -7,7 +7,7 @@
   <span class="method"><%= recipe.method %></span>
   <span class="timestamp">
     <% if current_user==(recipe.user) %>
-      <%= link_to "[delete recipe]", recipe, method: :delete,
+      <%= link_to "delete recipe", recipe, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>

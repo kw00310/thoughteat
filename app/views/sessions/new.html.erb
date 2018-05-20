@@ -1,4 +1,5 @@
 <div class="formlogin">
+  <%= flash[:danger] %>
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :username, class: 'label' %>
